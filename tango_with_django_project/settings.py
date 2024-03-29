@@ -22,11 +22,17 @@ LOGIN_URL = 'rango:login'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
+key = None
+with open('secret.key') as f:
+    key = f.read().strip()
+
+SECRET_KEY = key
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5(xhn&djbc95u5ei-%6c8l6p7-4(ryt$v(l*f%+&si^fa4-x@x'
+# SECRET_KEY = '5(xhn&djbc95u5ei-%6c8l6p7-4(ryt$v(l*f%+&si^fa4-x@x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['nabeel1276.pythonanywhere.com']
 
